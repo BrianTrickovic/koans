@@ -30,6 +30,12 @@ class AboutHashes < Neo::Koan
     # THINK ABOUT IT:
     #
     # Why might you want to use #fetch instead of #[] when accessing hash keys?
+
+    # Comment from Brian:
+    # If a key is not found, #fetch raises an error, whereas #[] returns nil.
+    # #fetch is good if you want to check if a key exists before attempting to
+    # access its value. A useful feature it has is handling non-existant keys by
+    # providing a default value to use in its place.
   end
 
   def test_changing_hashes
@@ -41,6 +47,10 @@ class AboutHashes < Neo::Koan
 
     # Bonus Question: Why was "expected" broken out into a variable
     # rather than used as a literal?
+
+    # Comment from Brian:
+    # To improve the readability of the code and help with debugging if
+    # the test fails.
   end
 
   def test_hash_is_unordered

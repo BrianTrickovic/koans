@@ -33,6 +33,10 @@ class AboutRegularExpressions < Neo::Koan
     # THINK ABOUT IT:
     #
     # When would * fail to match?
+
+    # Comment from Brian:
+    # When used with the anchors ^ & $, lazy quantifier (*?), and 
+    # negative character class ([^...]).
   end
 
   # THINK ABOUT IT:
@@ -40,6 +44,12 @@ class AboutRegularExpressions < Neo::Koan
   # We say that the repetition operators above are "greedy."
   #
   # Why?
+
+  # Comment from Brian:
+  # They are greedy because they try to match as much characters as possible
+  # while still conforming to the specified pattern it needs to match for.
+  # For instance on line 25, while "bc" per se was found, there are two additional
+  # "c"s after "bc". Since the operator is greedy, it will also gather those two "c"s.
 
   # ------------------------------------------------------------------
 
@@ -144,6 +154,11 @@ class AboutRegularExpressions < Neo::Koan
   # THINK ABOUT IT:
   #
   # Explain the difference between a character class ([...]) and alternation (|).
+
+  # Comment from Brian:
+  # A character class is seeking for a character match based on the specifications written
+  # from the user. The alternation is an OR operator whereby if it did not match a
+  # certain specification, it will check for 1+ more specification(s) to see if those will match.
 
   # ------------------------------------------------------------------
 

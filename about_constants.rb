@@ -69,6 +69,9 @@ class AboutConstants < Neo::Koan
   # QUESTION: Which has precedence: The constant in the lexical scope,
   # or the constant from the inheritance hierarchy?
 
+  # Comment from Brian:
+  # The constant in the lexical scope.
+
   # ------------------------------------------------------------------
 
   class MyAnimals::Oyster < Animal
@@ -84,4 +87,14 @@ class AboutConstants < Neo::Koan
   # QUESTION: Now which has precedence: The constant in the lexical
   # scope, or the constant from the inheritance hierarchy?  Why is it
   # different than the previous answer?
+
+  # Comment from Brian:
+  # The constant from the inheritance hierarchy. LEGS is not defined in
+  # the MyAnimals::Oyster class, so Ruby looks up the inheritance chain
+  # to find the nearest ancestor that defines LEGS. This is different
+  # than the previous answer because the first example had the constant
+  # defined in a nested scope within the child class, whereas the current
+  # example's constant is defined in a parent class it is being inherited from.
+  # When a constant is not found in the current scope, Ruby looks up the inheritance
+  # chain to find it. 
 end

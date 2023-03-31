@@ -38,6 +38,9 @@ class AboutObjects < Neo::Koan
 
     # THINK ABOUT IT:
     # What pattern do the object IDs for small integers follow?
+
+    # Comment from Brian:
+    # Increments by 2 in ID for each integer increase by 1, starting at 1 in ID for 0 in integer.
   end
 
   def test_clone_creates_a_different_object

@@ -159,6 +159,11 @@ class AboutClassMethods < Neo::Koan
   # Which do you prefer and why?
   # Are there times you might prefer one over the other?
 
+  # Comment from Brian:
+  # I prefer self.method because it is easier to read and
+  # it requires less lines to write. The times I may prefer
+  # class << self is when I would like to define multiple class methods
+  # at once.
   # ------------------------------------------------------------------
 
   def test_heres_an_easy_way_to_call_class_methods_from_instance_methods

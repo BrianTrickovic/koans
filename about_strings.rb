@@ -102,6 +102,13 @@ EOS
     #
     # Ruby programmers tend to favor the shovel operator (<<) over the
     # plus equals operator (+=) when building up strings.  Why?
+
+    # Comment from Brian:
+    # The shovel operator modifies the original string, but the 
+    # plus equal operator replaces it with a new string. This makes
+    # the shovel operator faster and use less memory. Also, the
+    # shovel operator can be used with mutliple different data
+    # types.
   end
 
   def test_double_quoted_string_interpret_escape_characters
@@ -131,6 +138,10 @@ EOS
     string = 'The value is #{value}'
     assert_equal 'The value is #{value}', string
   end
+  # Comment from Brian:
+  # Double quotes allow interpolation. Single quotes do not. Important distinction.
+  # Backticks (``) are for executing shell commands from within the Ruby program.
+  # They are not strings, nor are a way to implement interpolation like in JavaScript.
 
   def test_any_ruby_expression_may_be_interpolated
     string = "The square root of 5 is #{Math.sqrt(5)}"

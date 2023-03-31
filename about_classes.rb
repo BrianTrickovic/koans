@@ -124,6 +124,12 @@ class AboutClasses < Neo::Koan
     end
     # THINK ABOUT IT:
     # Why is this so?
+
+    # Comment from Brian:
+    # Because when an initialize method is created, each instance of that
+    # class expects its arguments to be filled in if parameters were provided to the method.
+    # The arguments give the instances their unique characteristics to be able to
+    # perform other class methods' functionality based on the information in the init method.
   end
 
   def test_different_objects_have_different_instance_variables

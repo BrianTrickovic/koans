@@ -89,6 +89,14 @@ class AboutIteration < Neo::Koan
 
     # Extra Credit:
     # Describe in your own words what inject does.
+
+    # Comment from Brian:
+    # The block accepts two parameters. The first parameter is the variable that
+    # stores the total result after each iteration. It gets its starting value from
+    # the inject’s argument (the parenthesis). The second parameter is an array’s
+    # item during each iteration. Depending upon how you handle the two parameters,
+    # the inject will give you an output of the first parameter’s value after
+    # all iterations are finished.
   end
 
   def test_all_iteration_methods_work_on_any_collection_not_just_arrays
@@ -119,4 +127,9 @@ class AboutIteration < Neo::Koan
   #
   # When you get to the "AboutSandwichCode" koan, recheck your answer.
 
+  # Comment from Brian:
+  # Using the do-end block reduces the amount of memory used, compared to
+  # saving it as a variable, where it may no longer be used after completing
+  # your File-related statements. Additionally, it organizes the code, where
+  # only the statements that relate to the File will be contained in the block.
 end

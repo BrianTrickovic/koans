@@ -33,6 +33,12 @@ class AboutNil < Neo::Koan
     # or
     #    obj == nil
     # Why?
+
+    # Comment from Brian:
+    # It is better to use obj.nil? because it is more readable, concise, and less
+    # error-prone than using == (which can be accidentally written as =).
+    # Additionally, the behavior of .nil? can be changed, as it can be
+    # overwritten by a class. =='s behavior can not be changed. 
   end
 
 end

@@ -36,6 +36,10 @@ class AboutMessagePassing < Neo::Koan
     # THINK ABOUT IT:
     #
     # Why does Ruby provide both send and __send__ ?
+    # Comment from Brian:
+    # Ruby provides both send and __send__ methods because send is a common method name that
+    # can conflict with method names defined in user code, and __send__ provides a way to
+    # invoke a method dynamically without this risk.
   end
 
   def test_classes_can_be_asked_if_they_know_how_to_respond
@@ -108,6 +112,12 @@ class AboutMessagePassing < Neo::Koan
     #
     # Thanks.  We now return you to your regularly scheduled Ruby
     # Koans.
+
+    # Comment from Brian:
+    # If we redefine method_missing, what would happen is that we would
+    # override the default behavior of raising a NoMethodError with instructions
+    # that we provide. The method_missing method will still be called if
+    # an object receives an undefined message.
   end
 
   # ------------------------------------------------------------------

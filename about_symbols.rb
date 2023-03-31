@@ -33,6 +33,16 @@ class AboutSymbols < Neo::Koan
   # Why do we convert the list of symbols to strings and then compare
   # against the string value rather than against symbols?
 
+  # Comment from Brian:
+  # If you use a symbol instead of a string as input for the 
+  # .include? Method, it will always evaluate to true because the very act
+  # of typing that symbol as an input will add it to the Symbol table, therefore
+  # any symbol you input will always be included and found as true. However, by
+  # using strings, the string you use as input will not be added to the Symbol
+  # table that you are checking into, which will enable the .include? Method to
+  # truly evaluate whether the name you input (as a string) actually
+  # exists in the Symbol table.
+
   in_ruby_version("mri") do
     RubyConstant = "What is the sound of one hand clapping?"
     def test_constants_become_symbols
@@ -98,4 +108,11 @@ class AboutSymbols < Neo::Koan
   # THINK ABOUT IT:
   #
   # Why is it not a good idea to dynamically create a lot of symbols?
+
+  # Comment from Brian:
+  # Creating a lot of symbols will have a high amount of memory consumption
+  # and require additional processing overhead, as the system needs to manage
+  # the memory. Dynamically creating a lot of symbols may also inadvertently 
+  # overwrite existing symbols. Furthermore, they are difficult to track for debugging
+  # purposes.
 end
